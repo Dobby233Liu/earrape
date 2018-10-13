@@ -1,7 +1,3 @@
-#pragma comment(linker,"\"/manifestdependency:type='win32' \
-name='Microsoft.Windows.Common-Controls' version='6.0.0.0' \
-processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
-
 #include <Windows.h>
 
 HCRYPTPROV prov;
@@ -30,6 +26,7 @@ int main(){
 	waveOutPrepareHeader(hwo, &hdr, sizeof(hdr));
 
 	for (;;) {
+		EARRRunAlternatePayloadW();
 		int freq1 = 0, freq2 = 0, freq3 = 0;
 		int sample1 = 0, sample2 = 0, sample3 = 0;
 		for (int i = 0; i < bufsize; i++) {
