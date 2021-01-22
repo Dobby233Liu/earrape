@@ -17,7 +17,7 @@ $(BUILDDIR):
 	mkdir $(BUILDDIR)
 
 $(BUILDDIR)/earrape.exe: $(CFILES)
-	$(CC) $(CFILES) $(CCFLAGS) $(LIBS) -o $@
+	$(CC) $(CFILES) $(CCFLAGS) $(LIBS) -O2 -o $@
 
 clean: $(BUILDDIR)
 	rm -r $(BUILDDIR)
